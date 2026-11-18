@@ -79,7 +79,6 @@ footer{padding:36px 0;font-size:15px;color:var(--muted)}
 footer .row{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:12px}
 .fine{font-size:13px;border-top:1px solid var(--line);padding-top:14px}
 @media (max-width:760px){
-  nav a:not(.btn){display:none}
   .hero{padding:44px 0 40px}
   .hero .grid,.two{grid-template-columns:1fr;gap:28px}
   section{padding:48px 0}
@@ -112,3 +111,24 @@ footer .row{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:12px}
 .author img{width:84px;height:84px;border-radius:50%;object-fit:cover;flex:none}
 .author p{margin:0;font-size:16px}
 @media(max-width:600px){.author{flex-direction:column;text-align:center}}
+
+/* Menú: escritorio muestra todo; celular usa botón hamburguesa */
+.links{display:contents}
+.menu-btn{display:none;background:transparent;border:1px solid var(--line);color:var(--text);border-radius:10px;width:44px;height:44px;font-size:22px;line-height:1;cursor:pointer}
+.menu-btn:hover{border-color:var(--brand)}
+@media (max-width:760px){
+  nav{gap:10px}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center;order:3}
+  .links{display:none}
+  header.open .links{display:flex;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--line);padding:8px 20px 16px;max-height:calc(100vh - 80px);overflow-y:auto;box-shadow:0 12px 24px rgba(0,0,0,.1)}
+  .links>a,.links .dd>a{display:block;padding:12px 0;font-size:17px;border-bottom:1px solid var(--line)}
+  .dd{display:block}
+  .ddm{display:block;position:static;border:0;box-shadow:none;padding:0 0 6px 14px;min-width:0;background:transparent}
+  .ddm a{white-space:normal;padding:9px 0;font-size:15px}
+}
+.zonas{margin-top:18px}
+@media (max-width:760px){
+  .bar{gap:8px}
+  .logo{font-size:16px;white-space:nowrap}
+  nav .btn.sm{white-space:nowrap;padding:10px 14px;font-size:14px}
+}

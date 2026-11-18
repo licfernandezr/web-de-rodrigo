@@ -21,12 +21,15 @@
   <div class="wrap bar">
     <a class="logo" href="/">Rodrigo <span>Fernández</span></a>
     <nav>
+      <div class="links" id="menu-links" onclick="if(event.target.closest('a')){var h=this.closest('header');h.classList.remove('open');h.querySelector('.menu-btn').setAttribute('aria-expanded','false')}">
       <a href="/#servicios">Servicios</a>
       <div class="dd"><a href="/areas">Áreas ▾</a><div class="ddm"><a href="/areas-insulino-resistencia-belgrano">Insulino resistencia en Belgrano</a><a href="/areas-insulino-resistencia-recoleta">Insulino resistencia en Recoleta</a><a href="/areas-hipertension-villa-crespo">Hipertensión en Villa Crespo</a><a href="/areas-colesterol-trigliceridos-almagro">Colesterol y triglicéridos en Almagro</a><a href="/areas-colesterol-trigliceridos-recoleta">Colesterol y triglicéridos en Recoleta</a><a href="/areas-bajar-de-peso-palermo">Bajar de peso en Palermo</a></div></div>
       <a href="/#consulta">Cómo trabajo</a>
       <a href="/#sobre-mi">Sobre mí</a>
       <a href="/#faq">Preguntas</a>
+      </div>
       <a class="btn sm" href="https://wa.me/5491130113742?text=Hola%21%20Quiero%20agendar%20mi%20primera%20consulta" target="_blank" rel="noopener">Agendar turno</a>
+      <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-links" onclick="var h=this.closest('header');this.setAttribute('aria-expanded',h.classList.toggle('open'))">☰</button>
     </nav>
   </div>
 </header>
